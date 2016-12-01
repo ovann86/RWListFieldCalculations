@@ -45,15 +45,15 @@ gform.addFilter( 'gform_merge_tag_value_pre_calculation', function( value, merge
             });
             var numberFormat = gf_get_field_number_format( formulaField.field_id, formId );
 
-			var decimalSeparator = ".";
-			var thousandSeparator = ",";
-			
-			if ( numberFormat == "decimal_comma" ){
-				decimalSeparator = ",";
-				thousandSeparator = ".";
-			}
-			
-			value = gformFormatNumber( value, !gformIsNumber( formulaField.rounding ) ? -1 : formulaField.rounding, decimalSeparator, thousandSeparator );
+            var decimalSeparator = ".";
+            var thousandSeparator = ",";
+
+            if ( numberFormat == "decimal_comma" ){
+                decimalSeparator = ",";
+                thousandSeparator = ".";
+            }
+
+            value = gformFormatNumber( value, !gformIsNumber( formulaField.rounding ) ? -1 : formulaField.rounding, decimalSeparator, thousandSeparator );
         }
 
     }
